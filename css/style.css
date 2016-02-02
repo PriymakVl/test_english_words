@@ -1,0 +1,43 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: url(../images/bg2.png);
+}
+
+.conteiner {
+	margin: 30px auto;
+	text-align: center;
+	font: 14px Helvetica, Arial, sans-serif;
+	width: 410px;
+} 
+
+h1 {
+	font-size: 16px;
+}
+
+table {
+	border-collapse: collapse;
+	background: #fff;
+}
+
+table td {
+	height: 50px;
+	width: 270px;
+	border: 1px solid black;
+	text-align: left;
+}
+
+table input {
+	margin: 0 25px 0 35px;
+}
+
+.table-title {
+	text-align: center;
+	font-weight: bold;
+	background: yellow;
+}
+
+.rus {
+	text-align: center;
+	width:;
+}
