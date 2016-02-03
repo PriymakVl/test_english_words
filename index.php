@@ -7,11 +7,9 @@ require_once 'HendlerFile.php';
 $sql = 'SELECT * FROM `words` ORDER BY rand() LIMIT 5';
 $stmt = $pdo->query($sql);
 $words = $stmt->fetchAll();
-//$word_check = array_rand($words);
+
 $num_check = rand(0, 5);
-//print_arr($words);
-echo $num_check;
-//print_arr($res);
+
 ?>
 <!DOCTYPE html>
 <html lang="ru">
