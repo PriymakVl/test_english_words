@@ -18,26 +18,90 @@ h1 {
 table {
 	border-collapse: collapse;
 	background: #fff;
+    text-align: center;
 }
 
 table td {
-	height: 50px;
-	width: 270px;
-	border: 1px solid black;
-	text-align: left;
+    border: 1px solid black;
+
 }
 
-table input {
+.main-table td {
+	height: 50px;
+	width: 270px;
+    font-size: 14px;
+}
+
+.main-table .eng {
+    text-align: left !important;
+}
+
+.main-table .eng:hover {
+    cursor: pointer;
+}
+
+.main-table input {
+    cursor: pointer;
 	margin: 0 25px 0 35px;
 }
 
 .table-title {
-	text-align: center;
+	text-align: center !important;
 	font-weight: bold;
 	background: yellow;
+    height: 30px !important;
 }
 
 .rus {
 	text-align: center;
-	width:;
 }
+
+.test-info {
+	width: 300px;
+	position: fixed;
+	top: 61px;
+	left: 30px;
+}
+
+.test-info th {
+    font-weight: bold;
+    font-size: 16px;
+	height: 30px;
+	background: yellow;
+	border:1px solid #000;
+
+}
+
+.test-info td {
+    height: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.test-info td:nth-child(2) {
+    width: 60px;
+}
+
+.button {
+    margin-top: 30px;
+    display: inline-block;
+    font-family: arial,sans-serif;
+    font-size: 11px;
+    color: rgb(205,216,228);
+    text-shadow: 0 -1px rgb(46,53,58);
+    text-decoration: none;
+    line-height: 2em;
+    padding: 7px 1.8em;
+    outline: none;
+    border: 1px solid rgba(33,43,52,1);
+    border-radius: 3px;
+    background: rgb(81,92,102) linear-gradient(rgb(81,92,102), rgb(69,78,87));
+
+}
+.button:hover {
+    border: 1px solid rgb(22,32,43);
+    border-bottom: 1px solid rgb(25,34,45);
+    background: rgb(53,61,71);
+    cursor: pointer;
+}
+
