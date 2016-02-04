@@ -9,16 +9,16 @@ $words = $stmt->fetchAll();
 
 $num_check = rand(0, 4);
 
-$num_words = 5;
-
-if($_GET['show'] == $num_words) {
-    header("Location: http://".$_SERVER['HTTP_HOST']."/report_test.php");
-}
+$length_test = 5;
 
 //statistics test
 $show_words = isset($_GET['show']) ? $_GET['show'] + 1 : 1;
-$remain_words = 5 - $show_words;
+$remain_words = $length_test - $show_words;
 $num_answers = isset($_GET['answers']) ? $_GET['answers'] : 0;
+
+if($_GET['show'] == $length_test) {
+    header("Location: http://".$_SERVER['HTTP_HOST']."/report_test.php?show=".$_GET['show']."&answers=".$num_answers);
+}
 
 ?>
 <!DOCTYPE html>
@@ -28,7 +28,6 @@ $num_answers = isset($_GET['answers']) ? $_GET['answers'] : 0;
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery.js"></script>
     <script src="js/check_word.js"></script>
-    <script src="js/reset.js"></script>
     <title>English</title>
 </head>
 <body>
@@ -43,9 +42,9 @@ $num_answers = isset($_GET['answers']) ? $_GET['answers'] : 0;
             printf('<tr>
                         <td rowspan="5" id="word_check" id_check="%d" class="rus">%s</td>
                         <td class="eng"><input type="radio" name="eng" id_word="%d">%s</td>
-                    </tr>',$words[$num_check]['id'], $words[$num_check]['rus'], $words[0]['id'], $words[0]['eng']);
+                    </tr>',$words[$num_check]['id'], $words[$num_check]['eng'], $words[0]['id'], $words[0]['rus']);
             for ($i = 1, $count = count($words); $i < $count; $i++) {
-                printf('<tr><td class="eng"><input type="radio" name="eng" id_word="%d">%s</td></tr>',$words[$i]['id'], $words[$i]['eng']);
+                    printf('<tr><td class="eng"><input type="radio" name="eng" id_word="%d">%s</td></tr>',$words[$i]['id'], $words[$i]['rus']);
             }
         ?>
      </table>
